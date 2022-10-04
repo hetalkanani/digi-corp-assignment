@@ -1,0 +1,629 @@
+img/*
+
+1 Reset Css #res
+2 Font Face #face 
+3 Inputs #input
+4 Global Styles #glob
+5 Wrappers #wrap
+6 Custom CSS #custom
+7 Media Query #media
+
+*/
+
+/*================================= 1 Reset Css ( #res ) =================================*/
+:hover{transition:all 0.5s ease 0s;}
+
+ul{list-style:none; margin:0; padding:0;}
+li{list-style:none;}
+
+.clearfix:after
+{content:"";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+
+/*================================= 2 Font Face ( #face ) =================================*/
+/* TypoGraphy */
+/*
+Google font apllied
+*/
+
+
+/*================================= 3  Inputs ( #input ) =================================*/
+/*
+Not added any form in this task right now.
+*/
+
+/*================================= 4 Global Styles (#glob) =================================*/
+
+
+h1 , h2 , h3 , h4 , h5 , h6{color: #333; margin-bottom: 15px}
+
+h1{font-size: 40px; line-height: 48px; font-weight: 400;}
+h2{font-size: 36px; line-height: 54px; font-weight: 600}
+h3{}
+h4{}
+h5{}
+h6{}
+h1 span{color: #00BDF2;}
+img{max-width: 100%;}
+p{color: #5F6368; font-size:16px; font-weight: 400; line-height: 24px; margin-bottom:20px}
+p:last-child{margin-bottom:0}
+p a{color:#00BDF2;}
+p strong{font-weight:700}
+p em{font-style:italic}
+p a:hover{text-decoration:none;}
+a, a:hover{transition: all ease .4s; text-decoration: none;}
+
+.flaticon {display: block; font-family: "Flaticon"; line-height: 1; color: #333;}
+.global-btn{
+	color: #00BDF2;
+	font-size: 16px;
+	line-height: 21px;
+	border: 1px solid #00BDF2;
+	padding: 12px 25px 11px;
+	border-radius: 40px;
+}
+.global-btn:hover{
+	background-color: #00BDF2;
+	color: #fff;
+}
+.section-space{
+	padding: 80px 0;
+}
+.bottom-section-space{
+	padding-bottom: 80px;
+}
+
+/* ================================= 5 Wrappers #wrap ================================= */	
+
+body{background:#fff; font-family: 'Poppins', sans-serif; line-height: 1; color:#5F6368; font-weight: 400}
+
+.container{max-width:1310px; width:100%;}
+
+
+
+/* ================================= 6 Custom CSS #custome ================================= */	
+/*.main-page{
+	padding-top: 96px;
+}*/
+.main-header{
+	border-bottom: 1px solid #F4F4F4;
+	position: relative;
+	z-index: 999;
+	background: #fff;
+	top: 0;
+	transition: all ease .4s;
+}
+.main-header.nav-up {
+    top: -96px;
+    transition: all ease .4s;
+}
+.main-header.sticky {
+    position: fixed;	
+    width: 100%;
+    top: 0;
+    transition: all ease .4s;
+}
+.main-header.sticky.nav-down{
+	top: -96px;
+	transition: all ease .4s;
+}
+.main-header nav {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+.main-header nav > ul {
+    display: flex;
+    column-gap: 20px;
+}
+.main-header nav > ul > li > a {
+    font-size: 16px;
+    padding: 40px 0;
+    display: block;
+    color: #333;
+    position: relative;
+}
+.main-header nav > ul > li.has-submenu > a:after{
+	content: '';
+	width: 15px;
+	background: #333;
+	height: 2px;
+	position: absolute;
+	left: 0;
+	bottom: 28px;
+	transition: all ease .4s;
+}
+.signin-wrap {
+    margin-left: auto;
+}
+.signin-wrap .global-btn{
+	white-space: nowrap;
+	display: block;
+}
+.main-header nav > ul > li.has-submenu:hover > a{
+	color: #00BDF2;
+}
+.main-header nav > ul > li.has-submenu:hover > a:after{
+	width: 100%;
+	background: #00BDF2; 
+	transition: all ease .4s;
+}
+.main-header nav > ul > li > .submenu-container{
+	position: absolute;
+    width: 100%;
+    left: 0;
+    background: #fff;
+    top: 96px;
+    box-shadow: 0px 6px 11px 0 rgb(0 0 0 / 9%);
+    padding: 30px 0;
+    opacity: 0; 
+    visibility: hidden; 
+    transform: translateY(40px);
+    transition: all ease .4s;
+    z-index: 99;
+    pointer-events: none;
+}
+.main-header nav > ul > li:hover > .submenu-container{
+	opacity: 1; 
+    visibility: visible; 
+    transform: translateY(0px);
+    transition: all ease .4s;
+    pointer-events: auto;
+}
+.main-header nav > ul > li > .submenu-container > ul{
+	max-width: 1310px;
+	padding: 0 15px;
+	margin: auto;
+	display: flex;
+    justify-content: space-evenly;
+}
+.main-header nav > ul > li > .submenu-container > ul > li > ul > li > h3{
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #00BDF2;
+	margin-bottom: 15px;
+}
+.main-header nav > ul > li > .submenu-container > ul > li > ul > li > a{
+	font-size: 14px;
+	color: #333;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	line-height: 24px;	
+	position: relative;
+	left: 0;
+	margin-bottom: 10px;
+}
+.main-header nav > ul > li > .submenu-container > ul > li > ul > li > a > i{
+	font-size: 18px;
+	margin-left: 15px;
+	transition: all ease .4s;
+}
+.main-header nav > ul > li > .submenu-container > ul > li > ul > li > a:hover{
+	left: 5px;
+	color: #00BDF2;
+}
+.main-header nav > ul > li > .submenu-container > ul > li > ul > li > a:hover i{
+	color: #00BDF2;
+	transition: all ease .4s;
+}
+
+
+/*Hero Section*/
+.hero-banner-wrap {
+    padding-top: 80px;
+    position: relative;
+    padding-bottom: 15%;
+    overflow: hidden;
+}
+
+/*circle animation*/
+
+.circle-wrap {
+    width: 540px;
+    height: 540px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #00BDF2;
+}
+.inner-circle-wrap{
+	width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #152B75;
+    display: block;
+    border: 5px solid #00BDF2;
+}
+.circle-wrap .circle {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle 12s linear infinite;
+    border: 1px dashed #00BDF2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle-inner{
+	width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #00BDF2;
+    display: block;
+}
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-270px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-270px)
+              rotate(-370deg);
+  }
+}
+/*=========*/
+
+.hero-img {
+    position: absolute;
+    top: 100px;
+    max-width: 100%;
+    margin: auto;
+    z-index: 1;
+    right: 0;
+    left: -35px;
+}
+.cloud-img {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    pointer-events: none;
+}
+.hero-desc{
+	max-width: 395px;
+	z-index: 9;
+	position: relative;
+}
+.hero-desc label {
+    background: rgb(0 189 242 / 20%);
+    border-radius: 40px;
+    padding: 8px 20px 6px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    width: max-content;
+    margin-bottom: 40px;
+}
+.hero-desc label img{
+	max-width: 25px;
+}
+.download-btn {
+    display: flex;
+    column-gap: 10px;
+    margin: 30px 0;
+}
+.download-btn a {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
+    background: #152B75;
+    column-gap: 15px;
+    border-radius: 50px;
+    color: #fff;
+}
+.download-btn a:hover{
+	background: #00BDF2;
+}
+.download-btn a i {
+    color: #fff;
+    font-size: 20px;
+}
+.download-btn a span {
+    font-size: 10px;
+}
+.download-btn a span strong {
+    font-size: 14px;
+    display: block;
+    font-weight: 500;
+}
+
+
+
+/*Service Section*/
+.service-list-wrap h2 {
+    text-align: center;
+}
+.service-list-holder {
+    margin-top: 50px;
+}
+.service-list-box {
+	 padding: 30px 15px;
+	 background: #fff;
+	 border-radius: 10px;
+	 transition: all ease .4s;
+	 max-width: 175px;
+	 min-width: 175px;
+	 margin-bottom: 20px
+}
+.service-list-box:hover{
+	background: #00BDF2;
+	transition: all ease .4s;
+	box-shadow: 0px 0px 32px 0px #00BDF26E;
+}
+.icon-holder {
+    position: relative;
+    z-index: 1;
+}
+.icon-holder i {
+    font-size: 60px;
+    margin-bottom: 25px;
+    transition: all ease .4s;
+}
+.gredient-pointer {
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(21, 43, 117, 0.5) 0%, rgba(84, 213, 249, 0.5) 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 35px;
+    margin: auto;
+    transition: all ease .4s;
+    z-index: -1;
+}
+.service-list-box h4{
+	font-size: 16px;
+	line-height: 24px;
+	color: #5F6368;
+	margin-bottom: 0;
+	transition: all ease .4s;
+}
+.service-list-box h4 strong{
+	display: block;
+	font-weight: 700;
+}
+.service-list-holder {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    justify-content: center;
+}
+.service-list-box {
+    text-align: center;
+}
+.service-list-box:hover .gredient-pointer{
+	opacity: 0;
+	transition: all ease .4s;
+}
+.service-list-box:hover i, .service-list-box:hover h4{
+	color: #fff;
+	transition: all ease .4s;
+}
+
+
+
+
+/* =================================  Media Query #media ================================= */	
+@media all and (max-width: 1080px) {
+	.main-header nav{
+		column-gap:20px;
+	}
+}
+
+@media all and (max-width: 1024px) {
+	h1 {
+	    font-size: 30px;
+	    line-height: 38px;
+	}
+	h2 {
+	    font-size: 24px;
+	    line-height: 36px;
+	}
+	.bottom-section-space{
+		padding-bottom: 30px;
+	}
+	.hero-banner-wrap{
+		padding-top: 50px;
+	}
+	.brand-wrap img{
+		max-width: 120px;
+	}
+	.main-header nav > ul > li > a{
+		font-size: 14px;
+	}
+	.service-list-holder{
+		column-gap: 50px;
+		margin-top: 25px;
+	}
+	.hero-banner-wrap{
+		padding-bottom: 8%;
+	}
+}
+@media all and (max-width: 991px) {
+	.main-header nav > ul{
+		column-gap:15px;
+	}
+	/*.circle-wrap{
+		transform: scale(0.7);
+		margin-top: -8%
+	}*/
+	.hero-desc label{
+		margin-bottom: 15px;
+	}
+	/*.hero-img{
+		top: 100px;
+		left: -18px;
+	}*/
+	
+	.download-btn {
+	    column-gap: 0px;
+	    flex-direction: column;
+	    row-gap: 10px;
+	    margin: 0;
+	}
+	.icon-holder i{
+		font-size: 48px;
+	}
+	.gredient-pointer{
+		width: 30px;
+		height: 30px;
+		left: 25px;
+	}
+	.service-list-holder{
+		column-gap: 10px;
+	}
+	.hero-banner-wrap{
+		padding-bottom: 15%;
+	}
+	/*hero-img responsive*/
+	.circle-wrap {
+	    transform: scale(1);
+	    margin-top: 30px;
+	    width: 400px;
+	    height: 400px;
+	}
+	.inner-circle-wrap{
+		width: 380px;
+		height: 380px;
+	}
+	.hero-img{
+		max-width: 420px;
+	}
+	.circle-wrap .circle{
+		width: 16px;
+		height: 16px;
+	}
+	.circle-inner{
+		width: 8px;
+		height: 8px;
+	}
+	@keyframes circle{
+	  0%{
+	    transform:rotate(0deg)
+	              translate(-200px)
+	              rotate(0deg);
+	  
+	  }
+	  100%{
+	    transform:rotate(360deg)
+	              translate(-200px)
+	              rotate(-370deg);
+	  }
+
+	}
+}
+@media all and (max-width: 768px) {
+	/* ============== Mobile Menu =====================*/
+	.main-header{
+		padding: 10px 0;
+	}
+	.main-header nav > ul {
+		position: fixed;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+@media all and (max-width: 767px) {
+	.hero-desc{
+		text-align: center;
+		margin: auto;
+	}
+	.hero-desc label{
+		margin: 0 auto 15px;
+	}
+	.hero-banner-wrap{
+		padding-bottom: 20%;
+	}
+	.bottom-section-space{
+		padding-top: 30px;
+	}
+	/*hero-img responsive*/
+	.circle-wrap {
+	    transform: scale(1);
+	    margin-top: 30px;
+	    width: 280px;
+	    height: 280px;
+	}
+	.inner-circle-wrap{
+		width: 260px;
+		height: 260px;
+	}
+	.hero-img{
+		max-width: 350px;
+	}
+	
+	@keyframes circle{
+	  0%{
+	    transform:rotate(0deg)
+	              translate(-140px)
+	              rotate(0deg);
+	  
+	  }
+	  100%{
+	    transform:rotate(360deg)
+	              translate(-140px)
+	              rotate(-370deg);
+	  }
+	}
+}
+@media all and (max-width: 580px) {
+
+}
+/********************************* Mobile Potrait #MP ********************************/
+@media screen and (max-width: 320px) and (orientation: portrait) {}
+
+/********************************* Mobile Potrait ********************************/
+@media screen and (max-width: 480px) and (orientation: portrait) {}
+
+/********************************* Mobile landscape ********************************/
+@media screen and (max-width: 480px) and (orientation: landscape) {}
+
+/* ================================= Common For All mobile definitions #mx ================================= */
+
+/********************************* ipad portrait #ip ********************************/
+@media only screen and (min-width : 768px) and (max-width: 1000px) {
+}
+
+/********************************* ipad landscape #il ********************************/
+@media only screen and (min-width : 1001px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width : 1025px) and (max-width: 1100px) {
+}
+/* ================================= Small Computer #Sc ================================= */
+@media only screen and (min-width : 1300px) {
+	
+}
+
+/* ================================= Large Computer #lc ================================= */
+@media screen and (min-width: 1450px) {}
+
+/* IE10 Only CSs */
+@media screen and (min-width:0\0) {}
+
+/* ie10, ie11+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {}
